@@ -282,35 +282,67 @@
 }
 
 
+
 /* ==========================================
-   ARCGIS MAP CONTROLS — SOLID WHITE
+   FORT HUACHUCA MAP CONTROLS
 ========================================== */
 
-.live-gis-map arcgis-map {
+/* Solid white legend panel */
+.live-gis-map .gis-legend-panel {
+  display: block;
+  background: #ffffff !important;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  max-height: 420px;
+  max-width: 300px;
+  overflow-y: auto;
+  opacity: 1 !important;
+  isolation: isolate;
+}
+
+/* Legend component */
+.live-gis-map .gis-legend-panel arcgis-legend {
+  display: block;
+  background: #ffffff;
+  --calcite-color-foreground-1: #ffffff;
+  --calcite-color-foreground-2: #ffffff;
+  --calcite-color-foreground-3: #ffffff;
+  --calcite-color-background: #ffffff;
+  opacity: 1;
+}
+
+/* Layer list panel */
+.live-gis-map .gis-layer-panel {
+  display: block;
+  background: #ffffff !important;
+  padding: 12px;
+  min-width: 260px;
+  max-height: 420px;
+  overflow-y: auto;
+  opacity: 1 !important;
+}
+
+/* ArcGIS controls */
+.live-gis-map arcgis-expand,
+.live-gis-map arcgis-layer-list,
+.live-gis-map arcgis-zoom {
   --calcite-color-foreground-1: #ffffff;
   --calcite-color-foreground-2: #ffffff;
   --calcite-color-foreground-3: #ffffff;
   --calcite-color-background: #ffffff;
 }
 
-/* Permanently visible legend */
-.live-gis-map arcgis-legend {
-  background-color: #ffffff;
-  opacity: 1;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
-}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .live-gis-map .gis-legend-panel {
+    max-width: 220px;
+    max-height: 280px;
+    padding: 8px;
+  }
 
-/* Layer list toggle */
-.live-gis-map arcgis-expand {
-  --calcite-color-foreground-1: #ffffff;
-  --calcite-color-foreground-2: #ffffff;
+  .live-gis-map .gis-layer-panel {
+    min-width: 200px;
+    max-height: 300px;
+  }
 }
-
-/* Zoom controls */
-.live-gis-map arcgis-zoom {
-  background-color: #ffffff;
-  --calcite-color-foreground-1: #ffffff;
-  --calcite-color-foreground-2: #ffffff;
-}
-

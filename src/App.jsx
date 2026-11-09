@@ -725,16 +725,23 @@ function closeProjectStory() {
     scale="900000"
     popup-disabled
   >
-    {/* Layer list - collapsible */}
+
+    {/* Layer list */}
     <arcgis-expand slot="top-left">
-      <arcgis-layer-list />
+      <div className="gis-layer-panel">
+        <arcgis-layer-list />
+      </div>
     </arcgis-expand>
 
     {/* Zoom controls */}
     <arcgis-zoom slot="top-right" />
 
-    {/* Legend - always visible */}
-    <arcgis-legend slot="bottom-left" />
+    {/* Legend - solid white container */}
+    <div slot="bottom-left" className="gis-legend-panel">
+      <arcgis-legend
+        reference-element="fort-huachuca-map"
+      />
+    </div>
 
   </arcgis-map>
 </div>
