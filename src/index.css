@@ -1981,3 +1981,291 @@ button {
   }
 }
 
+
+/* ==========================================
+   PROJECT DETAIL PAGE — RESTORED DESIGN
+========================================== */
+
+.project-detail {
+  padding: 75px 6vw 100px;
+  background: #f8f5ef;
+  color: var(--ink);
+}
+
+.project-detail-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Back navigation */
+
+.project-detail-back {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 34px;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: var(--forest);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.project-detail-back:hover {
+  color: var(--clay);
+}
+
+/* Project header */
+
+.project-detail-header {
+  max-width: none;
+  margin: 0 0 35px;
+  padding: 48px 55px;
+  border-radius: 20px;
+  background: var(--forest-deep);
+  color: white;
+}
+
+.project-detail-header .section-kicker {
+  margin-bottom: 18px;
+  color: #c3d4bb;
+}
+
+.project-detail-header h2 {
+  max-width: 1000px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 4.5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: white;
+}
+
+.project-detail-place {
+  margin: 22px 0 0;
+  color: #d6dfcf;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Main two-column layout */
+
+.project-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.project-detail-main,
+.project-detail-sidebar {
+  min-width: 0;
+}
+
+/* Main content cards */
+
+.project-detail-main .detail-section {
+  max-width: none;
+  margin: 0 0 24px;
+  padding: 40px 44px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.project-detail-main .section-kicker {
+  margin: 0 0 22px;
+  color: var(--forest-light);
+}
+
+.project-detail-summary {
+  max-width: 800px;
+  margin: 0;
+  color: #405348;
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+/* Original 2017 restoration story */
+
+.source-story-intro {
+  margin: 0 0 25px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.source-story-intro a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.source-story-intro a:hover {
+  color: var(--clay);
+}
+
+.project-source-story {
+  padding-left: 25px;
+  border-left: 3px solid var(--sage);
+}
+
+.project-source-story p {
+  margin: 0;
+  color: #46574d;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* Sidebar */
+
+.project-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-sidebar-card {
+  padding: 30px 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.detail-sidebar-card .section-kicker {
+  margin: 0 0 23px;
+  color: var(--forest-light);
+}
+
+/* Connected theme badges */
+
+.related-theme-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.related-theme-list span {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 13px;
+  border: 1px solid #d9e2d5;
+  border-radius: 999px;
+  background: #edf2e9;
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Map connection card */
+
+.map-connection-copy {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.map-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-feature-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--forest);
+  border-radius: 10px;
+  background: var(--forest);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.map-feature-button:hover {
+  background: var(--forest-deep);
+  transform: translateY(-2px);
+}
+
+.map-feature-arrow {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* Keyboard accessibility */
+
+.project-detail button:focus-visible,
+.project-detail a:focus-visible {
+  outline: 3px solid var(--clay);
+  outline-offset: 3px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .project-detail-layout {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 18px;
+  }
+
+  .project-detail-main .detail-section {
+    padding: 30px;
+  }
+
+  .project-detail-header {
+    padding: 40px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .project-detail {
+    padding: 50px 5vw 75px;
+  }
+
+  .project-detail-header {
+    padding: 34px 26px;
+    border-radius: 15px;
+  }
+
+  .project-detail-header h2 {
+    font-size: clamp(2.2rem, 8vw, 3.3rem);
+  }
+
+  .project-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-main .detail-section {
+    padding: 28px 24px;
+  }
+
+  .project-detail-summary {
+    font-size: 1.05rem;
+  }
+
+  .detail-sidebar-card {
+    padding: 26px 24px;
+  }
+}
+
+
