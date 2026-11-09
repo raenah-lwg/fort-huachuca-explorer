@@ -280,3 +280,37 @@
 #project-library {
   scroll-margin-top: 40px;
 }
+
+
+/* ==========================================
+   ARCGIS MAP CONTROLS — SOLID WHITE
+========================================== */
+
+.live-gis-map arcgis-map {
+  --calcite-color-foreground-1: #ffffff;
+  --calcite-color-foreground-2: #ffffff;
+  --calcite-color-foreground-3: #ffffff;
+  --calcite-color-background: #ffffff;
+}
+
+/* Permanently visible legend */
+.live-gis-map arcgis-legend {
+  background-color: #ffffff;
+  opacity: 1;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+}
+
+/* Layer list toggle */
+.live-gis-map arcgis-expand {
+  --calcite-color-foreground-1: #ffffff;
+  --calcite-color-foreground-2: #ffffff;
+}
+
+/* Zoom controls */
+.live-gis-map arcgis-zoom {
+  background-color: #ffffff;
+  --calcite-color-foreground-1: #ffffff;
+  --calcite-color-foreground-2: #ffffff;
+}
+
